@@ -29,12 +29,12 @@
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <input name="email" id="email" class="input" type="email" placeholder="Email" required>
+                        <input name="email" id="email" class="input" type="email" placeholder="Email" required data-type="email">
                         <label class="input-label" for="email">Email</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <input name="password" id="password" class="input" type="password" placeholder="Contraseña" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" title="Al menos 6 caracteres, Máximo 12. Debe contener minúsculas, mayúsculas y números.">
+                        <input name="password" id="password" class="input" type="password" placeholder="Contraseña" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" title="Al menos 6 caracteres, Máximo 12. Debe contener minúsculas, mayúsculas y números." data-type="password">
                         <label class="input-label" for="password">Contraseña</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
@@ -47,7 +47,7 @@
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <input name="phoneNumber" id="phoneNumber" class="input" type="text" placeholder="Número telefónico">
+                        <input name="phoneNumber" id="phoneNumber" class="input" type="text" placeholder="Número telefónico" pattern = "\d{10}" required maxlength="10" minlength="10" data-type = "tel">
                         <label class="input-label" for="phoneNumber">Número telefónico</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
@@ -55,17 +55,17 @@
                 <fieldset>
                     <legend class="form__label">Dirección</legend>
                     <div class="input-container">
-                        <input name="cep" id="cep" class="input" type="text" placeholder="CEP">
+                        <input name="cep" id="cep" class="input" type="text" placeholder="CEP" required pattern="[\s\S]{10,40}" data-type="adress">
                         <label class="input-label" for="cep">Dirección completa</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <input name="city" id="city" class="input" type="text" placeholder="Ciudad">
+                        <input name="city" id="city" class="input" type="text" placeholder="Ciudad" required pattern="[\s\S]{5,40}" data-type="city">
                         <label class="input-label" for="city">Ciudad</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <input name="state" id="state" class="input" type="text" placeholder="Estado">
+                        <input name="state" id="state" class="input" type="text" placeholder="Estado" required pattern="[\s\S]{5,40}" data-type="state">
                         <label class="input-label" for="state">Estado</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
